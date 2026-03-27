@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>De Cliderm | Excelência em Micropigmentação e Estética</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'cli-offwhite': '#FAFAFA',
+                        'cli-green': '#3A5F4F',
+                        'cli-gold': '#C5A059',
+                        'cli-dark': '#333333',
+                        'cli-cream': '#F3F4F1', /* Fundo levemente esverdeado/creme para alternância */
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Ajustes finos para o Glassmorphism */
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .glass-card {
+            background: rgba(250, 250, 250, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Ocultar scrollbar mantendo funcionalidade */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="font-sans text-cli-dark bg-cli-offwhite antialiased selection:bg-cli-gold selection:text-white">
+
+    <header class="fixed w-full top-0 z-50 glass-effect transition-all duration-300" id="header">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-serif font-bold text-cli-green tracking-wide">
+                De Cliderm<span class="text-cli-gold">.</span>
+            </a>
+
+            <nav class="hidden md:flex space-x-8 items-center">
+                <a href="#compromisso" class="text-sm font-medium hover:text-cli-gold transition-colors">Nosso Compromisso</a>
+                <a href="#sobre" class="text-sm font-medium hover:text-cli-gold transition-colors">A Clínica</a>
+                <a href="#portfolio" class="text-sm font-medium hover:text-cli-gold transition-colors">Resultados</a>
+                <a href="#servicos" class="text-sm font-medium hover:text-cli-gold transition-colors">Serviços</a>
+                <a href="#contato" class="px-5 py-2.5 bg-cli-green text-white text-sm font-medium rounded-full hover:bg-opacity-90 transition-all shadow-md">Agendar</a>
+            </nav>
+
+            <button class="md:hidden text-cli-green text-2xl focus:outline-none" id="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <div class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full" id="mobile-menu">
+            <nav class="flex flex-col px-6 py-4 space-y-4 shadow-lg">
+                <a href="#compromisso" class="text-sm font-medium text-cli-dark hover:text-cli-gold">Nosso Compromisso</a>
+                <a href="#sobre" class="text-sm font-medium text-cli-dark hover:text-cli-gold">A Clínica</a>
+                <a href="#portfolio" class="text-sm font-medium text-cli-dark hover:text-cli-gold">Resultados</a>
+                <a href="#servicos" class="text-sm font-medium text-cli-dark hover:text-cli-gold">Serviços</a>
+                <a href="#contato" class="text-center px-5 py-3 bg-cli-green text-white text-sm font-medium rounded-full">Agendar Consulta</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="relative h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat pt-20" style="background-image: url('https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');">
+        <div class="absolute inset-0 bg-gradient-to-b from-black/50 to-black/70"></div>
+        
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto mt-16" data-aos="fade-up" data-aos-duration="1000">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-serif text-white mb-6 font-semibold leading-tight shadow-sm">
+                Sua Beleza Realçada com Excelência e Cuidado Personalizado.
+            </h1>
+            <p class="text-base md:text-xl text-gray-200 mb-10 font-light max-w-2xl mx-auto">
+                Especialistas em Micropigmentação, Tratamento Capilar e Harmonização Facial no Vale do Aço desde 2008.
+            </p>
+            <a href="#contato" class="inline-flex items-center gap-2 bg-cli-gold hover:bg-[#b08d4b] text-white font-medium px-8 py-4 rounded-full transition-all duration-300 shadow-lg transform hover:-translate-y-1">
+                Agende uma Consulta <i class="fas fa-arrow-right text-sm"></i>
+            </a>
+        </div>
+    </section>
+
+    <section id="compromisso" class="py-20 bg-cli-offwhite">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-serif font-semibold text-cli-green mb-4">Nosso Compromisso</h2>
+                <div class="w-16 h-1 bg-cli-gold mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+                <div class="text-center p-8 rounded-2xl glass-card transition-transform hover:-translate-y-2 duration-300" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 bg-cli-cream rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm border border-cli-green/10">
+                        <i class="fas fa-leaf text-2xl text-cli-gold"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-semibold mb-3 text-cli-green">Resultados Excepcionais</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">Foco absoluto em realçar sua beleza natural de forma sutil, harmoniosa e duradoura.</p>
+                </div>
+
+                <div class="text-center p-8 rounded-2xl glass-card transition-transform hover:-translate-y-2 duration-300" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 bg-cli-cream rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm border border-cli-green/10">
+                        <i class="fas fa-user-md text-2xl text-cli-gold"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-semibold mb-3 text-cli-green">Altamente Qualificados</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">Equipe de especialistas dedicados e em constante atualização em suas respectivas áreas de atuação.</p>
+                </div>
+
+                <div class="text-center p-8 rounded-2xl glass-card transition-transform hover:-translate-y-2 duration-300" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-16 h-16 bg-cli-cream rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm border border-cli-green/10">
+                        <i class="fas fa-spa text-2xl text-cli-gold"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-semibold mb-3 text-cli-green">Segurança e Conforto</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">Ambiente acolhedor projetado para garantir seu bem-estar físico e emocional em cada procedimento.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre" class="py-24 bg-cli-cream">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-center gap-16 max-w-6xl mx-auto">
+                <div class="w-full lg:w-1/2 relative" data-aos="fade-right">
+                    <div class="absolute inset-0 bg-cli-gold rounded-3xl transform translate-x-4 translate-y-4 opacity-50"></div>
+                    <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Interior da Clínica De Cliderm" class="relative z-10 w-full h-auto rounded-3xl shadow-xl object-cover aspect-[4/3]">
+                </div>
+                
+                <div class="w-full lg:w-1/2" data-aos="fade-left">
+                    <h4 class="text-cli-gold font-medium uppercase tracking-widest text-sm mb-2">Tradição & Cuidado</h4>
+                    <h2 class="text-3xl md:text-4xl font-serif font-semibold text-cli-green mb-6">A De Cliderm</h2>
+                    <p class="text-gray-600 mb-6 leading-relaxed font-light text-justify">
+                        Desde 2008, atuamos com excelência na região do Vale do Aço, oferecendo serviços de alta qualidade e cuidados personalizados. Somos reconhecidos por nossa reputação impecável e dedicação em fornecer resultados excepcionais.
+                    </p>
+                    <p class="text-gray-600 mb-8 leading-relaxed font-light text-justify">
+                        Nossa missão é garantir que cada cliente receba um atendimento personalizado, seguro e confortável, visando realçar sua beleza natural e promover seu bem-estar físico e emocional.
+                    </p>
+                    <a href="#contato" class="inline-flex items-center gap-2 text-cli-green font-medium hover:text-cli-gold transition-colors pb-1 border-b-2 border-cli-green hover:border-cli-gold">
+                        Agende uma consulta conosco e descubra como podemos ajudá-lo.
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="py-20 bg-cli-offwhite">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-serif font-semibold text-cli-green mb-4">Nossos Resultados</h2>
+                <div class="w-16 h-1 bg-cli-gold mx-auto rounded-full mb-6"></div>
+                <p class="text-gray-500 font-light max-w-2xl mx-auto">Transformações reais que valorizam os traços únicos de cada paciente.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 max-w-7xl mx-auto">
+                
+                <div class="group relative overflow-hidden rounded-xl aspect-square cursor-pointer" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Micropigmentação Capilar" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-cli-green/90 via-cli-green/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                        <div class="p-6 w-full text-center transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                            <span class="text-white font-serif text-lg">Micropigmentação Capilar</span>
+                            <p class="text-cli-gold text-sm mt-1">Antes / Depois</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-xl aspect-square cursor-pointer" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Harmonização Facial" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-cli-green/90 via-cli-green/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                        <div class="p-6 w-full text-center transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                            <span class="text-white font-serif text-lg">Harmonização Facial</span>
+                            <p class="text-cli-gold text-sm mt-1">Sutil e Natural</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-xl aspect-square cursor-pointer" data-aos="fade-up" data-aos-delay="300">
+                    <img src="https://images.unsplash.com/photo-1512496015851-a1c8caac7547?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Design de Sobrancelhas" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-cli-green/90 via-cli-green/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                        <div class="p-6 w-full text-center transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                            <span class="text-white font-serif text-lg">Design de Sobrancelhas</span>
+                            <p class="text-cli-gold text-sm mt-1">Moldura do Rosto</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-xl aspect-square cursor-pointer" data-aos="fade-up" data-aos-delay="400">
+                    <img src="https://images.unsplash.com/photo-1616683693504-3ea7e9ad6fec?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Micropigmentação Labial" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-cli-green/90 via-cli-green/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                        <div class="p-6 w-full text-center transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                            <span class="text-white font-serif text-lg">Micropigmentação Labial</span>
+                            <p class="text-cli-gold text-sm mt-1">Cor e Revitalização</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="text-center mt-12" data-aos="fade-up">
+                 <a href="#" class="inline-block border border-cli-green text-cli-green hover:bg-cli-green hover:text-white font-medium px-8 py-3 rounded-full transition-colors duration-300">Ver Mais no Instagram</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicos" class="py-24 bg-cli-cream">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-serif font-semibold text-cli-green mb-4">Especialidades</h2>
+                <div class="w-16 h-1 bg-cli-gold mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+                
+                <div class="group bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-transparent hover:border-cli-gold/30" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-12 h-12 bg-cli-cream rounded-full flex items-center justify-center mb-6 group-hover:bg-cli-green transition-colors duration-300">
+                        <i class="fas fa-pen-nib text-cli-gold group-hover:text-white transition-colors duration-300"></i>
+                    </div>
+                    <h3 class="text-lg font-serif font-semibold text-cli-dark mb-3">Micropigmentação</h3>
+                    <p class="text-sm text-gray-500 mb-4 line-clamp-3">Técnicas avançadas para Sobrancelhas, Lábios e Capilar, devolvendo autoestima com naturalidade.</p>
+                    <a href="https://wa.me/SEUNUMERO" target="_blank" class="text-cli-gold text-sm font-medium hover:text-cli-green transition-colors inline-flex items-center gap-1">
+                        Saber mais <i class="fas fa-chevron-right text-xs"></i>
+                    </a>
+                </div>
+
+                <div class="group bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-transparent hover:border-cli-gold/30" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-12 h-12 bg-cli-cream rounded-full flex items-center justify-center mb-6 group-hover:bg-cli-green transition-colors duration-300">
+                        <i class="fas fa-magic text-cli-gold group-hover:text-white transition-colors duration-300"></i>
+                    </div>
+                    <h3 class="text-lg font-serif font-semibold text-cli-dark mb-3">Harmonização Facial</h3>
+                    <p class="text-sm text-gray-500 mb-4 line-clamp-3">Equilíbrio e proporção para o seu rosto. Realçamos seus traços mantendo a sua essência.</p>
+                    <a href="https://wa.me/SEUNUMERO" target="_blank" class="text-cli-gold text-sm font-medium hover:text-cli-green transition-colors inline-flex items-center gap-1">
+                        Saber mais <i class="fas fa-chevron-right text-xs"></i>
+                    </a>
+                </div>
+
+                <div class="group bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-transparent hover:border-cli-gold/30" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-12 h-12 bg-cli-cream rounded-full flex items-center justify-center mb-6 group-hover:bg-cli-green transition-colors duration-300">
+                        <i class="fas fa-hands-holding-circle text-cli-gold group-hover:text-white transition-colors duration-300"></i>
+                    </div>
+                    <h3 class="text-lg font-serif font-semibold text-cli-dark mb-3">Tratamentos Terapêuticos</h3>
+                    <p class="text-sm text-gray-500 mb-4 line-clamp-3">Abordagem integrativa para tratar disfunções estéticas de dentro para fora.</p>
+                    <a href="https://wa.me/SEUNUMERO" target="_blank" class="text-cli-gold text-sm font-medium hover:text-cli-green transition-colors inline-flex items-center gap-1">
+                        Saber mais <i class="fas fa-chevron-right text-xs"></i>
+                    </a>
+                </div>
+
+                <div class="group bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-transparent hover:border-cli-gold/30" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-12 h-12 bg-cli-cream rounded-full flex items-center justify-center mb-6 group-hover:bg-cli-green transition-colors duration-300">
+                        <i class="fas fa-shoe-prints text-cli-gold group-hover:text-white transition-colors duration-300"></i>
+                    </div>
+                    <h3 class="text-lg font-serif font-semibold text-cli-dark mb-3">Reflexologia</h3>
+                    <p class="text-sm text-gray-500 mb-4 line-clamp-3">Técnica de massagem que estimula pontos nos pés para promover relaxamento profundo e cura.</p>
+                    <a href="https://wa.me/SEUNUMERO" target="_blank" class="text-cli-gold text-sm font-medium hover:text-cli-green transition-colors inline-flex items-center gap-1">
+                        Saber mais <i class="fas fa-chevron-right text-xs"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-cli-green py-24 text-center border-b border-[#4A7160]/30 px-6">
+        <div class="max-w-4xl mx-auto" data-aos="fade-up">
+            <h2 class="text-4xl md:text-5xl font-serif text-white mb-6 font-semibold">
+                Pronta para realçar sua beleza única?
+            </h2>
+            <p class="text-lg md:text-xl text-cli-gold mb-10 font-light">
+                As vagas para nossa agenda de especialistas são limitadas. Reserve o seu horário agora.
+            </p>
+            <a href="#contato" class="inline-block bg-cli-gold hover:bg-[#b08d4b] text-white text-lg font-medium px-10 py-4 rounded-full transition-all duration-300 shadow-xl transform hover:-translate-y-1">
+                Agendar Minha Avaliação
+            </a>
+        </div>
+    </section>
+
+    <footer id="contato" class="bg-cli-green text-white pt-16 pb-8">
+        <div class="container mx-auto px-6 max-w-6xl">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16 items-center">
+                
+                <div>
+                    <h2 class="text-2xl font-serif font-bold tracking-wide mb-4 flex items-center gap-3 uppercase">
+                        <i class="fas fa-leaf text-white text-3xl"></i> De Cliderm
+                    </h2>
+                    <p class="text-gray-300 text-sm font-light leading-relaxed mb-6 pr-4">
+                        Sua saúde, beleza e longevidade tratadas com a seriedade e o requinte que você merece desde 2008.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-cli-gold flex items-center justify-center hover:bg-[#b08d4b] transition-colors duration-300 shadow-md">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-cli-gold flex items-center justify-center hover:bg-[#b08d4b] transition-colors duration-300 shadow-md">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="md:pl-8">
+                    <h4 class="text-lg font-serif font-medium mb-6 text-white">Fale Conosco</h4>
+                    <ul class="space-y-4 text-sm font-light text-gray-300">
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-map-marker-alt mt-1 text-cli-gold text-lg"></i>
+                            <span>
+                                Rua Exemplo de Endereço, 123<br>
+                                Bairro Centro, Ipatinga - MG
+                            </span>
+                        </li>
+                        <li class="flex items-center gap-3 mt-4">
+                            <i class="fas fa-phone text-cli-gold text-lg"></i>
+                            <a href="https://wa.me/SEUNUMERO" class="hover:text-white transition-colors">(31) 9XXXX-XXXX</a>
+                        </li>
+                        <li class="flex items-center gap-3 mt-4">
+                            <i class="far fa-envelope text-cli-gold text-lg"></i>
+                            <a href="mailto:contato@decliderm.com.br" class="hover:text-white transition-colors">contato@decliderm.com.br</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="flex flex-col items-start md:items-end text-left md:text-right">
+                    <p class="text-xl font-serif mb-6 text-white w-full">Pronto para realçar sua beleza?</p>
+                    <a href="https://wa.me/SEUNUMERO" target="_blank" class="w-full md:w-auto bg-cli-gold hover:bg-[#b08d4b] text-white font-medium px-8 py-4 rounded-md transition-all duration-300 shadow-md text-center">
+                        Fale conosco no WhatsApp
+                    </a>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-[#4A7160]/30 text-center flex flex-col items-center gap-2">
+                <p class="text-xs text-gray-400 font-light">
+                    &copy; 2026 De Cliderm. Todos os direitos reservados.
+                </p>
+                <p class="text-xs text-gray-400 font-light">
+                    Desenvolvido por <a href="#" class="text-cli-gold hover:text-white transition-colors">Momentum Digital</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/SEUNUMERO" target="_blank" class="fixed bottom-6 right-6 w-14 h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center text-3xl shadow-2xl hover:bg-[#1ebe57] hover:scale-110 transition-all duration-300 z-50">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Inicializar animações AOS
+        AOS.init({
+            once: true,
+            offset: 100,
+            duration: 800,
+            easing: 'ease-out-cubic',
+        });
+
+        // Toggle Menu Mobile
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Fechar menu mobile ao clicar em um link
+        const mobileLinks = menu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+
+        // Efeito sombra no header ao rolar (opcional, realça o glassmorphism)
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 10) {
+                header.classList.add('shadow-sm');
+            } else {
+                header.classList.remove('shadow-sm');
+            }
+        });
+    </script>
+</body>
+</html>
